@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Edit Assignment</title>
+    </head>
+    <body>
+        <select>
+            <option>SpeedGrader</option>
+        </select>
+        <hr/>
+        <h3>Assignment Name</h3>
+        <input type="text" id="assignment-name" value="A1 - ENV + HTML"/><br/><br/>
+        <textarea>This is the assignment description.</textarea><br/><br/>
+        
+        <label for=""assign-pts">Points</label><br/>
+        <input type="number" value="100"
+        name="points-assignment" id="assign-pts"/><br/><br/>
+        
+        <label>Assignment Group</label><br/>
+        <select>
+            <option value="ASSIGNMENT">ASSIGNMENTS</option>
+        </select><br/><br/>
+
+        <label>Display Grade As</label><br/>
+        <select>
+            <option selected="PERCENTAGE">Percentage</option>
+            <option value="GRADE">Grade</option>
+        </select><br/><br/>
+        
+        <label>Submission Type</label><br/>
+        <select>
+            <option selected="ONLINE">Online</option>
+            <option value="OFFLINE">Offline</option>
+        </select><br/><br/>
+
+        <label>Online Entry Options</label><br/>
+        <input type="checkbox" value="TEXTENTRY"
+        name="chk-text-entry" id="chk-txt"/>
+        <label for="chk-txt">Text Entry</label><br/>
+        <input type="checkbox" value="WEBSITEURL"
+        name="chk-website-url" id="chk-url"/>
+        <label for="chk-url">Website URL</label><br/>
+        <input type="checkbox" value="MEDIA"
+        name="chk-media-recordings" id="chk-media"/>
+        <label for="chk-media">Media Recordings</label><br/>
+        <input type="checkbox" value="ANNOTATIONS"
+        name="chk-student-annot" id="chk-annotations"/>
+        <label for="chk-annotations">Student Annontations</label><br/>
+        <input type="checkbox" value="UPLOADS"
+        name="chk-file-uploads" id="chk-uploads"/>
+        <label for="chk-uploads">File Uploads</label><br/><br/>
+
+        <label>Assign</label><br/>
+        <label for="assign-to">Assign To</label><br/>
+        <input type="text" value="Everyone" id="assign-to"/><br/><br/>
+
+        <label for="due-date">Due</label><br/>
+        <input type="date" value="2021-01-01" id="due-date"/><br/><br/>
+
+        <label for="available-date">Available From</label><br/>
+        <input type="date" value="2021-01-01" id="available-date"/><br/><br/>
+
+        <label for="until-date">Until</label><br/>
+        <input type="date" value="2021-01-01" id="until-date"/><br/><br/>
+
+        <button value="CANCEL">Cancel</button>
+        <button value="SAVE">Save</button>
+    </body>
+</html>
