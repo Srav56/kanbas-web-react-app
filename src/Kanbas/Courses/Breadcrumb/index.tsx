@@ -19,10 +19,10 @@ function Breadcrumb() {
     }
     
     return(
-        <div className="row d-none d-md-block" style={{padding: "0"}}>
-            <div className="col-12" style={{paddingLeft: "4vw"}}>
+        <div className="row d-none d-md-block" style={{padding: "0",margin:'0'}}>
+            <div className="col-12">
                 <div className="row m-0">
-                    <nav className="navbar wd-breadcrumb-navbar" aria-label="Small site nav bar">
+                    <nav className="navbar wd-breadcrumb-navbar" aria-label="Small site nav bar" style={{padding:'0',margin:'0'}}>
                         <div className="container-fluid">
                             <button className="wd-three-bar-menu" onClick={() => enableCourseNav()}><HiMiniBars3 /></button>
                             <GetPath/>

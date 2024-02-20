@@ -52,3 +52,8 @@
 .course-navigation-visible {
   display: block !important; /* Use !important to override other styles */
 }
+.wd-0-lr-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+

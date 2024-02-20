@@ -1,12 +1,18 @@
 .wd-kanbas-navigation {
     background-color: black;
     list-style: none;
-    padding: 0px;  
+    padding: 0px;
     margin: 0px;
     width: 80px;
     position: fixed;
-    overflow-y: auto;
-    height: 100%;
+    top: 0; /* Fixed to the top of the viewport */
+    bottom: 0; /* Stretch to the bottom of the viewport */
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Optionally, adjust the scrollbar appearance */
+.wd-kanbas-navigation::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
 }
 
 .wd-kanbas-navigation li {

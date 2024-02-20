@@ -9,7 +9,6 @@ function Grades() {
 
   return (
     <div>
-      <h1>Grades</h1>
       <div className="table-responsive">
         <table className="table">
           <thead>

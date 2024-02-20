@@ -1,3 +1,28 @@
 .wd-main-row {
     min-width: -webkit-fill-available;
 }
+/* Adjust the padding for the columns */
+.col-md-1 {
+    padding: 0;
+  }
+  
+  .col-md-11 {
+    padding: 0;
+  }
+/* Ensure the navigation has no unwanted margin or padding */
+
+
+/* Adjust the content area when screen size is medium or larger */
+@media (min-width: 768px) { /* Adjust this value based on the Bootstrap version you are using */
+    .wd-main-content {
+        margin-left: 80px; /* Adjust this value based on the actual width of your navigation */
+    }
+}
+
+/* Optional: Adjustments for smaller screens */
+@media (max-width: 767px) {
+    .wd-main-content {
+        margin-left: 0; /* No need for margin when navigation is not fixed */
+    }
+}
+  
