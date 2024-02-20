@@ -5,11 +5,11 @@ interface CourseNavigationProps {
     className?: string; // The '?' makes the prop optional
   }
   
-  function CourseNavigation({ className = "" }: CourseNavigationProps) {
+function CourseNavigation({ className = "" }: CourseNavigationProps) {
   const links = ["Home", "Modules", "Piazza", "Grades", "Assignments", "Quizzes", "Zoom Meetings", "People", "Announcements","Files","Panapto Video","Pages","Syllabus","Discussions","Collaborations","Outcomes","Settings"];
   const { pathname } = useLocation();
   return (
-    <ul className={`wd-navigation ${className}`}>
+    <ul id="courseNav" className={`wd-navigation ${className}`}>
       {links.map((link, index) => (
         <li key={index} className={pathname.includes(link) ? "wd-active" : ""}>
           <Link to={link}>{link}</Link>
