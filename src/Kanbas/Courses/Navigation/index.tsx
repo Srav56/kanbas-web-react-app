@@ -6,7 +6,7 @@ interface CourseNavigationProps {
   }
   
   function CourseNavigation({ className = "" }: CourseNavigationProps) {
-  const links = ["Home", "Modules", "Piazza", "Grades", "Assignments"];
+  const links = ["Home", "Modules", "Piazza", "Grades", "Assignments", "Quizzes", "Zoom Meetings", "People", "Announcements","Files","Panapto Video","Pages","Syllabus","Discussions","Collaborations","Outcomes","Settings"];
   const { pathname } = useLocation();
   return (
     <ul className={`wd-navigation ${className}`}>

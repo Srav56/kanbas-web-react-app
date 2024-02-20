@@ -13,7 +13,7 @@ function Kanbas() {
             </div>
 
             {/* Column 2a: Rest of screen. */}
-            <div className="col-12 col-sm-12 col-md-11 col-lg-11 col-xl-11 col-xxl-11 wd-main-content">
+            <div className="col-12 col-sm-12 col-md-11 col-lg-11 col-xl-11 col-xxl-11 wd-main-content" style={{marginLeft:'0px',paddingLeft:'0px'}}>
                 <Routes>
                     <Route path="/" element={<Navigate to="Dashboard" />} />
                     <Route path="Account" element={<h1>Account</h1>} />

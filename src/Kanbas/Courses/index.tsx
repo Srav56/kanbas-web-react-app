@@ -19,14 +19,14 @@ function Courses() {
                     <div className="col-md-1 d-none d-md-block">
                         <CourseNavigation />
                     </div>
-
+                    <div className="d-block d-md-none wd-0-lr-padding">
+                            <BlackHeader/>
+                    </div>
                     {/* Main Content A  rea */}
                     <div className="col-12 col-md-11">
-                        <div className="d-block d-md-none wd-0-lr-padding">
-                            <BlackHeader/>
-                        </div>
+                        
 
-                        <div className="col-12 col-sm-12 col-md-11 col-lg-11 col-xl-11 col-xxl-11" >
+                        <div className="col-12 col-sm-12 col-md-11 col-lg-11 col-xl-11 col-xxl-11" style={{paddingLeft:"6vw"}}>
                             <Routes>
                                 <Route path="/" element={<Navigate to="Home" />} />
                                 <Route path="Home" element={<Home/>} />
