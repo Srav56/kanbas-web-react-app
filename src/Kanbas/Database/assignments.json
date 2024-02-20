@@ -7,5 +7,14 @@
     { "_id": "A203", "title": "Heating Analysis", "course": "RS102" },
     { "_id": "A301", "title": "Structural Design Task", "course": "RS103" },
     { "_id": "A302", "title": "Orbital Calculations", "course": "RS103" },
-    { "_id": "A303", "title": "Systems Engineering Exam", "course": "RS103" }
+    { "_id": "A303", "title": "Systems Engineering Exam", "course": "RS103" },
+    { "_id": "A401", "title": "Introduction to CSS", "course": "RS104" },
+    { "_id": "A402", "title": "Bootstrap Form", "course": "RS104" },
+    { "_id": "A403", "title": "ReactJS Application", "course": "RS104" },
+    { "_id": "A501", "title": "Team Work 1", "course": "RS105" },
+    { "_id": "A502", "title": "Reading Reflection 1", "course": "RS105" },
+    { "_id": "A503", "title": "HW1", "course": "RS105" },
+    { "_id": "A601", "title": "UML Diagrams", "course": "RS106" },
+    { "_id": "A602", "title": "Logical Design", "course": "RS106" },
+    { "_id": "A603", "title": "MySQL", "course": "RS106" }
   ]
