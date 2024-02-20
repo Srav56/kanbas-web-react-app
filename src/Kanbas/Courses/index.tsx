@@ -7,7 +7,7 @@ import Breadcrumb from "./Breadcrumb";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
-import BlackHeader from "../BlackHeader";
+import BlackHeader from "../ResponsiveHeader";
 
 function Courses() {
     return (
