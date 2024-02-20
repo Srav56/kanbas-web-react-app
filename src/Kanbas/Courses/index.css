@@ -1,0 +1,54 @@
+.breadcrumb-nav {
+    --bs-breadcrumb-divider: '>';
+  }
+  .wd-custom-hamburger::before {
+    font-size: 1.8rem;
+    color: #D41B2C;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.wd-breadcrumb-header a{
+  color: red;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 300;
+  padding-left: 5px;
+  position: relative;
+  font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.wd-breadcrumb-header-active{
+  font-size: 1.175rem;
+  text-decoration: none;
+  padding-left: 5px;
+  position: relative;
+  color: rgba(77, 77, 77, 0.96);
+  font-family: LatoWeb, "Lato Extended", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.wd-custom-divider{
+  margin-top:-10px;
+  height: 2px;
+  background: grey;
+}
+/* index.css */
+
+.hamburger {
+  display: none; /* Hide hamburger on larger screens */
+  /* Style your hamburger button */
+}
+
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+  .hamburger {
+    display: block; /* Show hamburger button on smaller screens */
+    /* Further styling if needed */
+  }
+
+  /* Hide CourseNavigation by default on smaller screens */
+  .course-navigation {
+    display: none;
+  }
+}
+
+/* When navigation is supposed to be visible */
+.course-navigation-visible {
+  display: block !important; /* Use !important to override other styles */
+}
