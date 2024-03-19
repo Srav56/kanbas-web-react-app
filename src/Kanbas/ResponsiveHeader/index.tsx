@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import { FaHome, FaRegCircle, FaPlug, FaRocket, FaBars, FaUserFriends, FaComments, FaBullhorn, FaClipboardList, FaBullseye, FaCog, FaGlasses, FaBook, FaFolder, FaRegUserCircle, FaTachometerAlt, FaRegCalendarAlt, FaRegEnvelope, FaRegClock, FaRegCaretSquareRight, FaRegArrowAltCircleRight, FaRegQuestionCircle, FaEyeSlash, FaAngleRight, FaChevronDown } from "react-icons/fa";
 import { MdCancelPresentation } from "react-icons/md";
 import "./index.css";
-import { courses } from "../Database";
+import db from "../Database";
 
 function BlackHeader() {
     const kanbasNavLinks = [
@@ -40,7 +40,7 @@ function BlackHeader() {
     ];
     
     const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
+    const course = db.courses.find((course) => course._id === courseId);
 
     // Change  icon from chevron down to x.
     function changeIcon() {

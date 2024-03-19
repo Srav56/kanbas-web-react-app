@@ -2,13 +2,13 @@ import { FaBan, FaBell, FaBullhorn, FaCalendarCheck, FaCalendarDay, FaChartBar, 
 import "./index.css";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { courses } from "../../Database";
+import db from "../../Database";
 
 function Status() {
     const [isUnpubBtnDisabled, setUnpubBtn] = useState(false);
     const [isPubBtnDisabled, setPubBtn] = useState(false);
     const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
+    const course = db.courses.find((course) => course._id === courseId);
     
     // Function to change color and enable/disable unpublish and pubish buttons depending on which one is clicked.
     function changePublish(str: string) {

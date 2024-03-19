@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
-import { assignments } from "../../../Database";
+import db from "../../../Database";
 
 const AssignmentEditor: React.FC = () => {
   const { assignmentId, courseId } = useParams();
-  const assignment = assignments.find((assignment) => assignment._id === assignmentId);
+  const assignment = db.assignments.find((assignment) => assignment._id === assignmentId);
   const navigate = useNavigate();
 
   const handleSave = () => {

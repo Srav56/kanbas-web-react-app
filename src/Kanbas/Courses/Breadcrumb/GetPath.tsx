@@ -1,10 +1,10 @@
 import { useParams } from "react-router";
-import { courses } from "../../Database";
+import db from "../../Database";
 import { Link } from "react-router-dom";
 
 function GetPath() {
     const { courseId } = useParams();
-    const course = courses.find((course) => course._id === courseId);
+    const course = db.courses.find((course) => course._id === courseId);
 
     let currentURL = (document.URL);
     let webPage = currentURL.split("/");

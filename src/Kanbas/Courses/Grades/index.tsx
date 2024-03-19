@@ -1,4 +1,4 @@
-import { assignments, enrollments, grades, users } from "../../Database";
+import db from "../../Database";
 import { Link, useParams } from "react-router-dom";
 import "./index.css";
 import { FaFileExport, FaFileImport, FaGear, FaMagnifyingGlass } from "react-icons/fa6";
@@ -7,8 +7,8 @@ import { CiFilter } from "react-icons/ci";
 
 function Grades() {
     const { courseId } = useParams();
-    const filteredAssignments = assignments.filter((assignment) => assignment.course === courseId);
-    const filteredEnrollments = enrollments.filter((enrollment) => enrollment.course === courseId);
+    const filteredAssignments = db.assignments.filter((assignment) => assignment.course === courseId);
+    const filteredEnrollments = db.enrollments.filter((enrollment) => enrollment.course === courseId);
 
 
   return (
@@ -28,7 +28,7 @@ function Grades() {
                     </div>
                     <datalist id="studentListOptions">
                         {filteredEnrollments.map((enrollment, x) => {
-                            const user = users.find((user) => user._id === enrollment.user);
+                            const user = db.users.find((user) => user._id === enrollment.user);
                             return(
                                 <option key={x}>{user?.firstName} {user?.lastName}</option>
                             );
@@ -67,12 +67,12 @@ function Grades() {
           </thead>
           <tbody>
             {filteredEnrollments.map(enrollment => {
-              const user = users.find(user => user._id === enrollment.user);
+              const user = db.users.find(user => user._id === enrollment.user);
               return (
                 <tr key={enrollment._id}>
                   <td>{user?.firstName} {user?.lastName}</td>
                   {filteredAssignments.map((assignment, index) => {
-                                        const grade = grades.find((grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
+                                        const grade = db.grades.find((grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
                                         return(
                                             <td key={index} className="wd-table-cell">
                                                 <input className="wd-table-cell" defaultValue={grade?.grade} size={4} type="number" min="0" max="100" step=".01"/>

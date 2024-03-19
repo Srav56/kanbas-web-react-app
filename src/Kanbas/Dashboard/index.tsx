@@ -2,35 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import db from "../Database";
 import { FaEllipsisV, FaRegEdit } from "react-icons/fa";
-function Dashboard() {
-    const [courses, setCourses] = useState(db.courses);
-    const [course, setCourse] = useState({
-        _id: "0", name: "New Course", number: "New Number",
-        startDate: "2023-09-10", endDate: "2023-12-15",
-        image: "/images/reactjs.jpg"
-      });
-    
-      const addNewCourse = () => {
-        const newCourse = { ...course,
-                            _id: new Date().getTime().toString() };
-        setCourses([...courses, { ...course, ...newCourse }]);
-      };
-      const deleteCourse = (courseId: string) => {
-        setCourses(courses.filter((course) => course._id !== courseId));
-      };
-      const updateCourse = () => {
-        setCourses(
-          courses.map((c) => {
-            if (c._id === course._id) {
-              return course;
-            } else {
-              return c;
-            }
-          })
-        );
-      };
-    
-    
+function Dashboard({ courses, course, setCourse, addNewCourse,
+    deleteCourse, updateCourse }: {
+    courses: any[]; course: any; setCourse: (course: any) => void;
+    addNewCourse: () => void; deleteCourse: (course: any) => void;
+    updateCourse: () => void; })
+   {    
     return (
         <>
         <div className="d-none d-sm-block sticky-top wd-dashboard wd-dashboard-component"> 
