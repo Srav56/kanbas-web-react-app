@@ -24,21 +24,8 @@ function ModuleList() {
   return (
     <>
       {/* <!-- Add buttons here --> */}
-      <ul className="list-group wd-modules">
-      <li className="list-group-item">
-        <button onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
-          Add
-        </button>
-        <button onClick={() => dispatch(updateModule(module))}>
-                Update
-        </button>
-        <input value={module.name}
-          onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
-        />
-        <textarea value={module.description}
-          onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
-        />
-      </li>
+      <ul className="list-group wd-modules" style={{marginTop: "6px"}}>
+      
         {moduleList
         .filter((module) => module.course === courseId)
         .map((module) => (
@@ -49,18 +36,15 @@ function ModuleList() {
               <FaEllipsisV className="me-2" />
               {module.name}
               <span className="float-end">
-                <FaCheckCircle className="text-success" />
-                <FaPlusCircle className="ms-2" />
-                <button onClick={() => dispatch(setModule(module))}>
-                  Edit
-                </button>
-
-                <button onClick={() => dispatch(deleteModule(module._id))}>
+                <button className="btn btn-danger mt-2 p-2 float-end" style={{borderRadius: "6px"}} onClick={() => dispatch(deleteModule(module._id))}>
                   Delete
                 </button>
-
-                <FaEllipsisV className="ms-2" />
+                <button className="btn btn-custom-red mt-2 p-2 float-end" style={{borderRadius: "6px"}} onClick={() => dispatch(setModule(module))}>
+                  Edit
+                </button>
+                
               </span>
+              
             </div>
             {selectedModule._id === module._id && (
               <ul className="list-group">
@@ -78,6 +62,21 @@ function ModuleList() {
             )}
           </li>
         ))}
+        <li style={{borderRadius: "6px", marginTop: "25px"}} className="list-group-item">
+        
+        <input id="modName" className="m-2 p-2" style={{borderRadius: "6px", width: "40vw"}} value={module.name}
+          onChange={(e) => dispatch(setModule({ ...module, name: e.target.value }))}
+        />
+        <textarea className="form-control m-2 p-2" style={{width: "40vw", borderRadius: "6px"}} value={module.description}
+          onChange={(e) => dispatch(setModule({ ...module, description: e.target.value }))}
+        />
+        <button type="button" className="btn btn-custom-red mt-2 p-2 float-end" style={{borderRadius: "6px"}} onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+          Add
+        </button>
+        <button type="button" className="btn btn-custom-red mt-2 p-2 float-end" style={{borderRadius: "6px"}} onClick={() => dispatch(updateModule(module))}>
+                Update
+        </button>
+      </li>
       </ul>
     </>
   );

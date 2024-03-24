@@ -15,7 +15,7 @@ function Kanbas() {
       startDate: "2023-09-10", endDate: "2023-12-15",
     });
     const addNewCourse = () => {
-      setCourses([...courses, { ...course, _id: new Date().getTime().toString() }]);
+      setCourses([...courses, { ...course, _id: new Date().getTime().toString(), "image": "reactjs.jpg" }]);
     };
     const deleteCourse = (courseId: any) => {
       setCourses(courses.filter((course) => course._id !== courseId));

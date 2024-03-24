@@ -10,28 +10,31 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
   
     return (
         <>
-        <div className="d-none d-sm-block sticky-top wd-dashboard wd-dashboard-component"> 
+        <div className="d-none d-sm-block sticky-top wd-dashboard wd-dashboard-component" style={{backgroundColor: "white", opacity: 1}}> 
                 <h1>Dashboard</h1>
                 <h5>Course</h5>
-                <input value={course.name} className="form-control"
+                
+                <hr/>
+            </div>
+
+            <div className="wd-dashboard-component" style={{marginBottom: "45px"}}>
+                <input style={{margin:"5px", marginLeft: "0px"}} value={course.name} className="form-control"
                         onChange={(e) => setCourse({ ...course, name: e.target.value }) } />
-                <input value={course.number} className="form-control"
+                <input style={{margin:"5px", marginLeft: "0px"}} value={course.number} className="form-control"
                         onChange={(e) => setCourse({ ...course, number: e.target.value }) } />
-                <input value={course.startDate} className="form-control" type="date"
+                <input style={{margin:"5px", marginLeft: "0px"}} value={course.startDate} className="form-control" type="date"
                         onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
-                <input value={course.endDate} className="form-control" type="date"
+                <input style={{margin:"5px", marginLeft: "0px"}} value={course.endDate} className="form-control" type="date"
                         onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
 
 
 
-                <button onClick={addNewCourse} >
+                <button className="btn btn-custom-red mt-2 p-2 float-end" style={{borderRadius: "6px"}} onClick={addNewCourse} >
                     Add
                 </button>
-                <button onClick={updateCourse} >
+                <button className="btn btn-custom-red mt-2 p-2 float-end" style={{borderRadius: "6px"}} onClick={updateCourse} >
                     Update
                 </button>
-
-                <hr/>
             </div>
 
             <div className="d-block d-sm-none wd-dashboard-component">
@@ -55,13 +58,13 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                                         style={{ textDecoration: "none", color: "navy", fontWeight: "bold" }}>
                                             <p className="wd-nowrap" style={{marginBottom: "2px"}}>{course.name}</p>
                                     </Link>
-                                    <button onClick={(event) => {
+                                    <button className="btn btn-custom-red mt-2 p-2 float-end" style={{borderRadius: "6px"}} onClick={(event) => {
                                         event.preventDefault();
                                         setCourse(course);
                                     }}>
                                     Edit
                                     </button>
-                                    <button onClick={(event) => {
+                                    <button className="btn btn-danger mt-2 p-2 float-end" style={{borderRadius: "6px"}} onClick={(event) => {
                                                 event.preventDefault();
                                                 deleteCourse(course._id);
                                             }}>
