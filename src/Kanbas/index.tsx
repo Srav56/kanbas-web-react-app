@@ -4,6 +4,8 @@ import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import db from "./Database";
 import { useState } from "react";
+import store from "./store";
+import { Provider } from "react-redux";
 
 
 function Kanbas() {
@@ -31,6 +33,7 @@ function Kanbas() {
     };
   
     return (
+      <Provider store={store}>
         <div className="container-fluid wd-main-container">
         <div className="row wd-main-row">
             {/* Column 1a: Kanbas Navigation. Hide on screen smaller than medium. */}
@@ -63,5 +66,6 @@ function Kanbas() {
             </div>
         </div>
     </div> 
+    </Provider>
   );}
 export default Kanbas;

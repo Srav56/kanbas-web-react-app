@@ -6,8 +6,8 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
     deleteCourse, updateCourse }: {
     courses: any[]; course: any; setCourse: (course: any) => void;
     addNewCourse: () => void; deleteCourse: (course: any) => void;
-    updateCourse: () => void; })
-   {    
+    updateCourse: () => void; }){
+  
     return (
         <>
         <div className="d-none d-sm-block sticky-top wd-dashboard wd-dashboard-component"> 
@@ -21,6 +21,7 @@ function Dashboard({ courses, course, setCourse, addNewCourse,
                         onChange={(e) => setCourse({ ...course, startDate: e.target.value }) }/>
                 <input value={course.endDate} className="form-control" type="date"
                         onChange={(e) => setCourse({ ...course, endDate: e.target.value }) } />
+
 
 
                 <button onClick={addNewCourse} >
